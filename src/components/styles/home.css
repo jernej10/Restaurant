@@ -1,0 +1,62 @@
+.heroSection {
+  position: relative;
+  height: 30rem;
+}
+.heroSection img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-bottom-left-radius: 50px 20px;
+  border-bottom-right-radius: 50px 20px;
+}
+.heroTextContainer {
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 5rem;
+  width: 50%;
+}
+main {
+  margin: 1rem 5rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: 15px 0px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1524px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1019px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 729px) {
+  .cardGrid {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  main {
+    margin: 10px !important;
+  }
+  .filterContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+}
